@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krishanth - Portfolio</title>
+<meta name="description" content="Portfolio of Krishanth, 2nd year B.Tech CSE (AI & ML) student.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<style>
+:root{color-scheme:dark;--bg:#0b1120;--soft:#0f172a;--card:#131c31;--tint:rgba(59,130,246,.16);--text:#e2e8f0;--muted:#94a3b8;--line:#1f2a44;--accent:#3b82f6;--accent2:#2563eb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,17,32,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;font-size:1.15rem;color:var(--accent)}
+.links{display:flex;gap:26px;list-style:none;padding:0}
+.links a{font-size:.95rem;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.links a:hover,.links a.active{color:var(--accent);border-color:var(--accent)}
+.burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--text)}
+section{padding:80px 0}
+.alt{background:var(--soft)}
+h2{font-size:2rem;text-align:center;margin-bottom:10px}
+h2::after{content:"";display:block;width:54px;height:4px;border-radius:4px;background:var(--accent);margin:10px auto 0}
+.sub{text-align:center;color:var(--muted);margin:14px auto 40px;max-width:560px}
+.hero{padding:70px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.tag{display:inline-block;background:var(--tint);color:var(--accent);font-weight:600;font-size:.85rem;padding:5px 14px;border-radius:99px;margin-bottom:16px}
+.hero h1{font-size:2.8rem;line-height:1.2;margin-bottom:16px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:520px;margin-bottom:28px}
+.btn{display:inline-block;padding:12px 26px;border-radius:10px;font-weight:600;border:2px solid var(--accent);cursor:pointer;font-size:1rem;transition:.2s;font-family:inherit}
+.btn.fill{background:var(--accent);color:#fff}.btn.fill:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn.out{color:var(--accent);background:transparent;margin-left:10px}.btn.out:hover{background:var(--tint);transform:translateY(-2px)}
+.pic{text-align:center}
+.avatar{width:210px;height:210px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;font-size:5rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 12px 30px rgba(37,99,235,.28)}
+.facts{list-style:none;padding:16px 20px;border:1px solid var(--line);border-radius:14px;text-align:left;font-size:.93rem;background:var(--card)}
+.facts li{display:flex;justify-content:space-between;gap:12px;padding:6px 0}
+.facts b{color:var(--muted);font-weight:600}
+.about p{max-width:760px;margin:0 auto 14px;text-align:center;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.4);border-color:#2d4a8a}
+.card h3{font-size:1.1rem;margin-bottom:6px}.card p{color:var(--muted);font-size:.93rem}
+.ico{font-size:1.8rem;margin-bottom:8px}
+.proj{display:grid;grid-template-columns:1fr 1.2fr;gap:0;overflow:hidden;padding:0;max-width:900px;margin:0 auto}
+.proj .shot{background:linear-gradient(135deg,#16254a,#2a1b4d);display:grid;place-items:center;font-size:4rem;min-height:220px}
+.proj .body{padding:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.chip{background:var(--tint);color:var(--accent);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:99px}
+.soon{text-align:center;color:var(--muted);margin-top:28px}
+ul.tick{list-style:none;padding:0}
+ul.tick li{padding:5px 0 5px 26px;position:relative;color:var(--muted);font-size:.95rem}
+ul.tick li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}
+.cl a{display:block;padding:16px 20px;margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:.2s}
+.cl a:hover{border-color:var(--accent);transform:translateX(4px)}
+.cl small{display:block;color:var(--muted)}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:14px}
+input,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--text)}
+input:focus,textarea:focus{outline:2px solid #2d4a8a;border-color:var(--accent)}
+.msg{font-size:.9rem;color:#4ade80;min-height:1.2em}
+footer{text-align:center;padding:26px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:820px){
+.burger{display:block}
+.links{position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:8px 22px 14px;border-bottom:1px solid var(--line);display:none}
+.links.open{display:flex}.links a{display:block;padding:10px 0}
+.hero .wrap,.contact,.proj{grid-template-columns:1fr}
+.hero h1{font-size:2.2rem}.pic{order:-1}
+section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+<a class="brand" href="#home">Krishanth</a>
+<button class="burger" id="burger" aria-label="Menu">☰</button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+</ul></div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+<div>
+<span class="tag">Aspiring Software Developer</span>
+<h1>Hi, I’m <span>Krishanth</span></h1>
+<p>2nd year B.Tech CSE (Artificial Intelligence &amp; Machine Learning) student. I enjoy building projects with Python, Java and FastAPI that solve real problems, especially in education and technology.</p>
+<a class="btn fill" href="#projects">View My Work</a><a class="btn out" href="#contact">Get In Touch</a>
+</div>
+<div class="pic">
+<div class="avatar">K</div>
+<ul class="facts">
+<li><b>Program</b><span>B.Tech CSE (AI &amp; ML)</span></li>
+<li><b>Year</b><span>2nd Year</span></li>
+<li><b>CGPA</b><span>8.0</span></li>
+</ul></div>
+</div></header>
+
+<section id="about" class="alt about"><div class="wrap reveal">
+<h2>About Me</h2><p class="sub">A little about who I am and where I’m heading.</p>
+<p>I’m a second-year Computer Science Engineering student specialising in Artificial Intelligence and Machine Learning, currently holding an 8.0 CGPA. I’m building my skills in programming and backend development, and I learn best by applying ideas to real projects like the Student Gap Analyser.</p>
+<p>I enjoy teamwork, creative problem-solving and picking up new technologies, and I’m looking for internship and project opportunities where I can keep learning and contribute.</p>
+<div class="grid" style="margin-top:36px">
+<div class="card"><div class="ico">🎯</div><h3>Career Interests</h3><ul class="tick"><li>Software Development</li><li>Web Development</li><li>Technology &amp; Innovation</li></ul></div>
+<div class="card"><div class="ico">💪</div><h3>Personal Strengths</h3><ul class="tick"><li>Quick learner</li><li>Problem-solving mindset</li><li>Team collaboration</li><li>Adaptability</li><li>Willingness to learn</li><li>Creative thinking</li></ul></div>
+<div class="card"><div class="ico">🗣️</div><h3>Languages</h3><ul class="tick"><li>English</li><li>Kannada</li><li>Hindi</li></ul></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap reveal">
+<h2>Skills</h2><p class="sub">Languages and tools I’m currently learning and building with.</p>
+<div class="grid">
+<div class="card"><div class="ico">🐍</div><h3>Python</h3><p>Core programming, logic building and backend scripting.</p></div>
+<div class="card"><div class="ico">☕</div><h3>Java</h3><p>Object-oriented programming fundamentals.</p></div>
+<div class="card"><div class="ico">🌐</div><h3>HTML</h3><p>Structuring and organising web content.</p></div>
+<div class="card"><div class="ico">⚡</div><h3>FastAPI</h3><p>Building fast, modern backend APIs with Python.</p></div>
+</div></div></section>
+
+<section id="education" class="alt"><div class="wrap reveal">
+<h2>Education</h2><p class="sub">My academic background.</p>
+<div class="card" style="max-width:640px;margin:0 auto">
+<ul class="facts" style="border:0;padding:0">
+<li><b>Qualification</b><span>B.Tech CSE - AI &amp; ML</span></li>
+<li><b>Specialisation</b><span>Artificial Intelligence &amp; Machine Learning</span></li>
+<li><b>CGPA</b><span>8.0</span></li>
+<li><b>Status</b><span>Pursuing - 2nd Year</span></li>
+</ul></div></div></section>
+
+<section id="projects"><div class="wrap reveal">
+<h2>Projects</h2><p class="sub">Things I’ve built and activities I’ve taken part in.</p>
+<div class="card proj">
+<div class="shot">📊</div>
+<div class="body"><h3>Student Gap Analyser</h3>
+<div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Academic Project</span></div>
+<p>An academic project focused on identifying students’ existing skills, analysing skill gaps and helping them discover suitable learning opportunities. It aims to support students in improving their technical abilities and preparing for internships and career opportunities.</p></div>
+</div>
+<div class="card" style="max-width:900px;margin:24px auto 0">
+<h3>🏆 Achievements &amp; Activities</h3>
+<ul class="tick" style="margin-top:8px"><li>Participated in Smart India Hackathon (SIH).</li><li>Participated in academic project-based learning activities.</li><li>Collaborated with team members during problem-solving and ideation activities.</li></ul></div>
+<p class="soon">More projects coming soon!</p>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap reveal">
+<h2>Let’s Connect</h2><p class="sub">Open to internships and project opportunities. Reach out, I’ll get back soon.</p>
+<div class="contact">
+<div class="cl">
+<a href="mailto:kkrishanth55@gmail.com"><small>Email</small>kkrishanth55@gmail.com</a>
+<a href="tel:+916381809787"><small>Phone</small>+91 63818 09787</a>
+<a href="https://www.linkedin.com/" target="_blank" rel="noopener"><small>LinkedIn</small>View Profile</a>
+</div>
+<form id="form">
+<input name="name" placeholder="Name" required>
+<input name="email" type="email" placeholder="Email" required>
+<input name="subject" placeholder="Subject" required>
+<textarea name="message" rows="4" placeholder="Message" required></textarea>
+<button class="btn fill" type="submit">Send Message</button>
+<div class="msg" id="msg"></div>
+</form></div></div></section>
+
+<footer>© 2026 Krishanth. All rights reserved.</footer>
+
+<script>
+const links=document.getElementById('links');
+document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+links.addEventListener('click',()=>links.classList.remove('open'));
+const secs=[...document.querySelectorAll('header[id],section[id]')],as=[...links.querySelectorAll('a')];
+addEventListener('scroll',()=>{let c=secs[0].id;secs.forEach(s=>{if(scrollY+120>=s.offsetTop)c=s.id});as.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c))});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('form').addEventListener('submit',async e=>{
+ e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f)),m=document.getElementById('msg');
+ try{const r=await fetch('/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
+  if(!r.ok)throw 0;m.textContent='Thanks '+d.name+'! Your message was received.';f.reset();
+ }catch(_){location.href='mailto:kkrishanth55@gmail.com?subject='+encodeURIComponent(d.subject)+'&body='+encodeURIComponent(d.message+'\n\n- '+d.name+' ('+d.email+')');}
+});
+</script>
+</body>
+</html>
